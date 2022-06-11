@@ -2,6 +2,7 @@
 
 
 
+import 'dart:collection';
 import 'dart:math';
 
 import 'package:quantools/gates.dart';
@@ -43,7 +44,7 @@ class Simulator {
       labels.add(_bintostring(_tobin(i)));
     }
 
-    Map<String, int> counts = {};
+    SplayTreeMap<String, int> counts = SplayTreeMap<String, int>();
     var random = Random();
     loopThroughAllShots: for (int i = 0; i < shots; i++) {
       double a = random.nextDouble();

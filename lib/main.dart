@@ -15,5 +15,9 @@ void main() {
 
   Simulator simulator = Simulator.transpile(qc);
 
-  simulator.run(shots: 1000);
+  var res = simulator.run(shots: 1000);
+
+  for (var key in res.keys) {
+    print("${key} => ${res[key]}");
+  }
 }
