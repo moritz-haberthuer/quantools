@@ -17,24 +17,60 @@ class QuantumCircuit {
 
 
 
-  /*
-  applies a X-gate
-   */
+
   void x(int qbit) {
     gates.add(X(qbit));
   }
 
-  /*
-  applies a H-gate
-   */
+  void y(int qbit) {
+    gates.add(Y(qbit));
+  }
+
+  void z(int qbit) {
+    gates.add(Z(qbit));
+  }
+
   void h(int qbit) {
     gates.add(H(qbit));
   }
 
-  /*
-  applies a h-gate
-   */
+  void i(int qbit) {
+    gates.add(I(qbit));
+  }
+
+  void t(int qbit) {
+    gates.add(T(qbit));
+  }
+
+  void tdg(int qbit) {
+    gates.add(Tdg(qbit));
+  }
+
+  void s(int qbit) {
+    gates.add(S(qbit));
+  }
+
+  void sdg(int qbit) {
+    gates.add(Sdg(qbit));
+  }
+
   void cx(int qbit1, int qbit2) {
     gates.add(CX(qbit1, qbit2));
+  }
+
+  void cy(int qbit1, int qbit2) {
+    gates.add(CY(qbit1, qbit2));
+  }
+
+  void cu(int qbit1, int qbit2) {
+    gates.add(CZ(qbit1, qbit2));
+  }
+
+  void ch(int qbit1, int qbit2) {
+    gates.add(CX(qbit1, qbit2));
+  }
+
+  void swap(int qbit1, int qbit2) {
+    gates.add(Swap(qbit1, qbit2));
   }
 }
