@@ -62,7 +62,7 @@ class QuantumCircuit {
     gates.add(CY(qbit1, qbit2));
   }
 
-  void cu(int qbit1, int qbit2) {
+  void cz(int qbit1, int qbit2) {
     gates.add(CZ(qbit1, qbit2));
   }
 
