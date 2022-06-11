@@ -67,7 +67,7 @@ class QuantumCircuit {
   }
 
   void ch(int qbit1, int qbit2) {
-    gates.add(CX(qbit1, qbit2));
+    gates.add(CH(qbit1, qbit2));
   }
 
   void swap(int qbit1, int qbit2) {
