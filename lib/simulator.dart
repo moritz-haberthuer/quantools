@@ -26,7 +26,7 @@ class Simulator {
   }
 
 
-  void run({int shots = 1000}) {
+  Map<String, int> run({int shots = 1000}) {
     Matrix initialState = Matrix(_dim, 1);
     initialState.set(0,0, Complex(1, 0));
     Matrix finalState = unitary.mul(initialState);
@@ -59,7 +59,7 @@ class Simulator {
       }
     }
 
-    print(counts);
+    return counts;
   }
 
 
@@ -121,6 +121,4 @@ class Simulator {
     }
     return unitary;
   }
-
-
 }
