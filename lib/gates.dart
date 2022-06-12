@@ -253,3 +253,22 @@ class Swap extends Gate{
   }
 }
 
+class Toffoli extends Gate{
+  int qbit1;
+  int qbit2;
+  int qbit3;
+
+  static Matrix unitary = Matrix.filledByReals(8, 8, [[1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,], [0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,], [0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,], [0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,], [0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,], [0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,], [0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,], [0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,], ]);
+  Toffoli(this.qbit1, this.qbit2, this.qbit3) ;
+
+  @override
+  List<int> getQbits() {
+    return [qbit1, qbit2, qbit3];
+  }
+
+  @override
+  Matrix getUnitary() {
+    return unitary;
+  }
+}
+

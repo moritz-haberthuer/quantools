@@ -73,4 +73,8 @@ class QuantumCircuit {
   void swap(int qbit1, int qbit2) {
     gates.add(Swap(qbit1, qbit2));
   }
+
+  void toffoli(int qbit1, int qbit2, int qbit3) {
+    gates.add(Toffoli(qbit1, qbit2, qbit3));
+  }
 }
